@@ -76,10 +76,14 @@ Also incudings instructions for deployment across a suite of free tools.
    - DATABASE_USERNAME
    - DATABASE_PASSWORD
    - DATABASE_URI
+   - NETLIFY_BUILD_HOOK
 
    Use values from your mLab db.
 
 1. Deploy your code to Heroku.
+1. Author some content like you did on your local Strapi instance. Don't forget
+   to add public read (find / findone) permissions to your CMS in the **Roles
+   and Permissions** section.
 
 ### Frontend
 
@@ -93,7 +97,9 @@ Also incudings instructions for deployment across a suite of free tools.
        could be due to incompatibility between Netlify's Node version and what
        you need for the libraries.
 1. When you're done, your site will start deploying, but it will fail.
-1. Go to Deploys > Build Settings and set the base directo to client. This will
-   effectively change the publish directory to client/public.
+1. Go to **Deploys** > **Build Settings** and set the base directory to
+   `client`. This will effectively change the publish directory to
+   `client/public`.
+1. Deploy again and you should be up and running.
 
 ## TODO
