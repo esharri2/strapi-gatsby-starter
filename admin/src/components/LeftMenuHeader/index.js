@@ -4,15 +4,16 @@
  *
  */
 
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
-import Wrapper from './Wrapper';
+import Wrapper from "./Wrapper";
 
 function LeftMenuHeader() {
   return (
     <Wrapper>
       <Link to="/" className="leftMenuHeaderLink">
+        HOME
         <span className="projectName" />
       </Link>
     </Wrapper>
