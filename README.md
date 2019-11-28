@@ -1,4 +1,7 @@
-# WIP Gatsby + Strapi Starter Project
+**Note: This is a WIP, but it works enough that you should give it a try if
+you're interested. Thanks!**
+
+# Gatsby + Strapi Starter Project
 
 A boilerplate setup for websites using the [Gatsby](https://www.gatsbyjs.org/)
 React framework and [Strapi](https://strapi.io/) CMS.
@@ -19,6 +22,12 @@ Also incudings instructions for deployment across a suite of free tools.
 - Netlify - front end
 - Heroku - back end
 - mLab - database
+
+### Features
+
+- Some simple components, custom hooks, and a CSS style guide file
+- Customized Strapi admin panel, including a Publish button that triggers a
+  Netlify build
 
 ## Set up steps
 
@@ -60,6 +69,10 @@ Also incudings instructions for deployment across a suite of free tools.
    - Global styles variables are included here and can be imported as needed:
      `client/src/utils/styles.js`.
    - Global styles are here: `client/gatsby-browser.js`.
+   - Customizations have been made to the default Strapi admin panel here:
+     `/admin`.
+   - Strapi users can trigger a Gatsby build on Netfliy via the button on the
+     home page of the admin panel.
 
 ## Deployment steps
 
@@ -70,15 +83,14 @@ Also incudings instructions for deployment across a suite of free tools.
 1. Go to [Heroku](https://dashboard.heroku.com/apps) and create a new app.
 1. Go into the app's settings and set the following config vars:
 
-   - DATABASE_HOST
-   - DATABASE_PORT
-   - DATABASE_NAME
-   - DATABASE_USERNAME
-   - DATABASE_PASSWORD
-   - DATABASE_URI
-   - NETLIFY_BUILD_HOOK
+   - `DATABASE_HOST`
+   - `DATABASE_PORT`
+   - `DATABASE_NAME`
+   - `DATABASE_USERNAME`
+   - `DATABASE_PASSWORD`
+   - `DATABASE_URI`
 
-   Use values from your mLab db.
+   Use values from your mLab db for the `DATABASE_x`.
 
 1. Deploy your code to Heroku.
 1. Author some content like you did on your local Strapi instance. Don't forget
@@ -100,6 +112,12 @@ Also incudings instructions for deployment across a suite of free tools.
 1. Go to **Deploys** > **Build Settings** and set the base directory to
    `client`. This will effectively change the publish directory to
    `client/public`.
-1. Deploy again and you should be up and running.
+1. On the same page, find the Build Hooks section and click **Add build hook**.
+   Copy the build hook url and paste it in the `buildHook` value of the `config`
+   object at the top of `admin/src/containers/HomePage/index.js`.
+1. Deploy again and you should be up and running. Also test the **Publish now**
+   button in the Strapi admin panel to confirm it triggers a build in Netlify.
 
 ## TODO
+
+...

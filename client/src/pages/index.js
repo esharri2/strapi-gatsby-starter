@@ -1,7 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby";
-
-import SEO from "../components/seo";
+import { graphql, Link } from "gatsby";
 
 const Index = ({ data }) => {
   const restaurants = data.allStrapiRestaurant.edges;
@@ -9,7 +7,6 @@ const Index = ({ data }) => {
   console.log(restaurants);
   return (
     <div>
-      <SEO />
       <h1>Restaurants</h1>
       <div>
         {restaurants.map(restaurant => (
@@ -19,6 +16,7 @@ const Index = ({ data }) => {
           </li>
         ))}
       </div>
+      <Link to="/component-demo">Component demo page</Link>
     </div>
   );
 };

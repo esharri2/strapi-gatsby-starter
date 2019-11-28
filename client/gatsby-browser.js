@@ -1,34 +1,34 @@
-import React from 'react'
-import { createGlobalStyle } from 'styled-components'
-import { colors, fonts } from './src/utils/styles'
+import React from "react";
+import { createGlobalStyle } from "styled-components";
+import { colors, fonts } from "./src/utils/styles";
 
 const GlobalStyle = createGlobalStyle`
 
   html {
     height: 100%;
-    overflow-y: scroll;
+    font-size: 16px;
   }
 
   html, body {
-    margin: 0;
+    margin: 0!important;
     padding: 0;
     box-sizing: border-box;
   }
 
   body {
-    background-color: ${colors.lightest};
-    color: ${colors.darkest};
-    font-family: ${fonts.body};
-    font-size: 1rem;
+    background-color: ${colors.periwinklegrey};
+    font-family: Helvetica, sans-serif;
     position: relative;
     min-height: 100%;
     *, *:before, *:after {
       box-sizing: inherit;
     }
   }
-`
-export default ({ children }) => (
-  <React.Fragment>
+`;
+
+export const wrapRootElement = ({ element }) => (
+  <>
     <GlobalStyle />
-  </React.Fragment>
-)
+    {element}
+  </>
+);
