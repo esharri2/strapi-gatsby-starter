@@ -34,6 +34,8 @@ const Index = ({ data }) => {
           type="text"
           value="hi"
         />
+        <Heading level={1}>Contact Form</Heading>
+        <ContactForm />
         <Paragraph>
           Fugiat ullamco esse pariatur sunt laboris non consectetur Lorem
           exercitation cupidatat do Lorem ad. Culpa sit deserunt nostrud id
@@ -58,8 +60,6 @@ const Index = ({ data }) => {
           irure occaecat enim velit magna. Ullamco irure incididunt deserunt
           cupidatat officia ad mollit.
         </Paragraph>
-        <Heading level={1}>Contact Form</Heading>
-        <ContactForm />
       </Main>
       <Footer />
     </div>

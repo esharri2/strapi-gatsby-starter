@@ -12,22 +12,25 @@ Also incudings instructions for deployment across a suite of free tools.
 
 ### Tools
 
-- React front end: Gatsby
-- CSS: styled-components
-- CMS: Strapi
-- DB: MongoDB
+- React front end = Gatsby
+- CSS = styled-components
+- CMS = Strapi
+- DB = MongoDB
 
 ### Deployment
 
-- Netlify - front end
-- Heroku - back end
-- mLab - database
+- Front end = Netlify
+- Back end = Heroku
+- DB = mLab
+- Email = Mailgun
 
 ### Features
 
 - Some simple components, custom hooks, and a CSS style guide file
 - Customized Strapi admin panel, including a Publish button that triggers a
   Netlify build
+- Contact form component that sends email via a custom "Contact Form" plugin on the Strapi server
+
 
 ## Set up steps
 
@@ -60,7 +63,7 @@ Also incudings instructions for deployment across a suite of free tools.
    ```
 
    If you want to do a quick test to ensure Gatsby is pulling data from the CMS,
-   create a content type called `Restaurant` and add name and description text
+   create a content type in Strapi called `Restaurant` and add **name** and **description** text
    fields to it. Add a couple restaurants. You can then `cd client` and run
    `gatsby develop`. You should see the restaurants listed on the page.
 
@@ -90,12 +93,22 @@ Also incudings instructions for deployment across a suite of free tools.
    - `DATABASE_PASSWORD`
    - `DATABASE_URI`
 
-   Use values from your mLab db for the `DATABASE_x`.
+   Use values from your mLab db for the `DATABASE_x` values.
+  
+1. If you plan to use the Contact Form component, create a [Mailgun](https://www.mailgun.com/) account, and create a sandbox domain. 
+  
+    Add these these config vars:
+
+    - `TRANSPORTER_EMAIL` - email address from the Mailgun sandbox account
+    - `TRANSPORTER_EMAIL_PW` - password from the Mailgun sandbox account
+    - `OWNER_EMAIL` - email address that you want the contact form to send to
+
+    Also add the `OWNER_EMAIL` value to the list of authorized recipients in Mailgun. 
 
 1. Deploy your code to Heroku.
 1. Author some content like you did on your local Strapi instance. Don't forget
    to add public read (find / findone) permissions to your CMS in the **Roles
-   and Permissions** section.
+   and Permissions** section. If you're going to use the Contact Form component, you will also need to add public permissions to the "contact-form" plugin endpoint.
 
 ### Frontend
 
@@ -121,3 +134,5 @@ Also incudings instructions for deployment across a suite of free tools.
 ## TODO
 
 ...
+
+

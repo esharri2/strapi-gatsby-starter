@@ -1,6 +1,6 @@
 import React from "react";
 import { createGlobalStyle } from "styled-components";
-import { colors, fonts } from "./src/utils/styles";
+import { colors, dimensions, fonts } from "./src/utils/styles";
 
 const GlobalStyle = createGlobalStyle`
 
@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html, body {
-    margin: 0!important;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
@@ -23,6 +23,7 @@ const GlobalStyle = createGlobalStyle`
     *, *:before, *:after {
       box-sizing: inherit;
     }
+    padding-bottom: ${dimensions.footerHeight}
   }
 `;
 

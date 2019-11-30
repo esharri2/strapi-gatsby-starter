@@ -1,0 +1,13 @@
+{
+  "routes": [
+    {
+      "method": "POST",
+      "path": "/contact",
+      "handler": "ContactForm.index",
+      "config": {
+        "policies": [],
+        "prefix": false
+      }
+    }
+  ]
+}
