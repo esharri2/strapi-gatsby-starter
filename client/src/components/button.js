@@ -18,10 +18,10 @@ const ButtonTag = styled.button`
   }
 `;
 
-const Button = props => (
-  <ButtonTag aria-label={props.title} {...props}>
+const Button = React.forwardRef((props, ref) => (
+  <ButtonTag ref={ref} aria-label={props.title} {...props}>
     {props.children}
   </ButtonTag>
-);
+));
 
 export default Button;

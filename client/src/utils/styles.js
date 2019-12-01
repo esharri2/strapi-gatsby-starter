@@ -5,6 +5,13 @@ export const colors = {
   malibu: "#53D8FB",
 };
 
+export const hexTransparencies = {
+  95: "F2",
+  90: "E6",
+  75: "BF",
+  50: "80",
+};
+
 export const defaultFontStack = ["Helvetica", "sans-serif"].join();
 
 export const fonts = {
@@ -17,8 +24,8 @@ export const fonts = {
 };
 
 export const dimensions = {
-  headerHeight: "140px",
-  footerHeight: "70px",
+  headerHeight: "120px",
+  footerHeight: "120px",
 };
 
 export const spacing = {
@@ -33,6 +40,9 @@ export const spacing = {
 
 export const shadows = {
   sm: "0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)",
+  md: "0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)",
+  lg: "0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)",
+  xl: "0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22)",
 };
 
 export const transitions = {

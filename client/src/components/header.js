@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 
+import Gear from "./icons/gear";
 import Logo from "./logo";
 import Nav from "./nav";
 
@@ -12,11 +13,14 @@ import {
   fonts,
   shadows,
   spacing,
+  zIndexes,
 } from "../utils/styles";
 
 const HeaderWrapper = styled.div`
   width: 100%;
   background-color: ${colors.licorice};
+  position: fixed;
+  z-index: ${zIndexes.bottom};
 `;
 
 const HeaderTag = styled.header`
@@ -26,14 +30,6 @@ const HeaderTag = styled.header`
   align-items: center;
   padding: 0 ${spacing.sm};
 `;
-
-// const HeaderLogo = styled(Logo)`
-//   grid-area: logo;
-//   font-size: 2rem;
-//   display: flex;
-//   align-items: center;
-//   justify-content: flex-start;
-// `;
 
 const Header = () => {
   return (

@@ -5,7 +5,7 @@ import Icon from "../icon";
 
 const GearIcon = props => {
   return (
-    <Icon color={props.color}>
+    <Icon color={props.color} className={props.className}>
       <Gear />
     </Icon>
   );
