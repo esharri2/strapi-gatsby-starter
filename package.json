@@ -14,7 +14,7 @@
   "dependencies": {
     "dotenv": "^8.2.0",
     "nodemailer": "^6.3.1",
-    "strapi": "3.0.0-beta.17.5",
+    "strapi": "3.2.5",
     "strapi-admin": "3.0.0-beta.17.5",
     "strapi-hook-mongoose": "3.0.0-beta.17.5",
     "strapi-plugin-content-manager": "3.0.0-beta.17.5",
